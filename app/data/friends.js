@@ -1,7 +1,6 @@
 
 // ===============================================================================
 // DATA
-// Below data will hold all of the reserved tables.
 // Initially we just set it equal to a "dummy" customer.
 // But you could have it be an empty array as well.
 // ===============================================================================
@@ -25,6 +24,7 @@ var friends = [
 },
 
 {
+ "name":"Lisa",
   "photo":"https://quindry.com/wp-content/gallery/people/dynamic/Kelli-10_.jpg-nggid03941-ngg0dyn-1565x1500x100-00f0w010c010r110f110r010t010.jpg",
   "scores":[
      4,

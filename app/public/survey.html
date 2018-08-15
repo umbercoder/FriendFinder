@@ -18,7 +18,7 @@
       <h3>Best Friends are only a CLICK away!</h3>
       <hr>
       <a href="/"><button class="btn btn-danger btn-lg"><span class="fa fa-eye"></span> Search For Firends</button></a>
-      <a href="/survey"><button class="btn btn-danger btn-lg"><span class="fa fa-plus"></span> Take Survey</button></a>
+      <a href="/app/public/survey.html"><button class="btn btn-danger btn-lg"><span class="fa fa-plus"></span> Take Survey</button></a>
     </div>
 
 	<div class="container">
@@ -161,8 +161,68 @@
 
          <footer class="footer">
             <div class="container">
-                    <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/umbercoder/FriendFinder">GitHub Repo</a></p>
+                    <p><a href="/app/data/friends">API Friends List</a> | <a href="https://github.com/umbercoder/FriendFinder">GitHub Repo</a></p>
               </div>
             </footer>
 
-	</div>
+    </div>
+    	<!-- Modal Dialog Displaying Closest Friend Match -->
+	<div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Your Best Friend Match</h4>
+                <div class="divider"></div>
+                <h5 id="matchName"></h5>
+                <img id="MatchImage" class="materialboxed" width="650" src="">
+            </div>
+            <div class="modal-footer">
+                <a href="/app/data/friends" class="modal-action modal-close waves-effect waves-green btn-flat">Fill Again!</a>
+            </div>
+        </div>
+    
+        <script type="text/javascript">
+            // $(document).ready(function() {
+            //     $('select').material_select();
+            //     $('.modal').modal({
+            //         dismissible: false, // Modal can be dismissed by clicking outside of the modal
+            //         opacity: .5, // Opacity of modal background
+            //         inDuration: 300, // Transition in duration
+            //         outDuration: 200, // Transition out duration
+            //         startingTop: '4%', // Starting top style attribute
+            //         endingTop: '10%' // Ending top style attribute
+            //     });
+            // });
+            // Activate submit button
+            $('#submit').on('click', function(event) {
+                event.preventDefault();
+                console.log('here')
+                // Gather user inputs
+                var friendinfo = {
+                    name: $('#name').val().trim(),
+                    photo: $('#photo').val().trim(),
+                    scores:[
+                        $('#q1').val().trim(),
+                        $('#q2').val().trim(),
+                        $('#q3').val().trim(),
+                        $('#q4').val().trim(),
+                        $('#q5').val().trim(),
+                        $('#q6').val().trim(),
+                        $('#q7').val().trim(),
+                        $('#q8').val().trim(),
+                        $('#q9').val().trim(),
+                        $('#q10').val().trim()
+                    ]
+                };
+
+                // Add user inputs to friends list
+                $.post('/app/data/friends', friendinfo)
+                  .done(function(data) {
+                      // Set the name and image values of friend match
+                      $('#userMatch').html(data.matchName);
+                    $("#userMatchImage").attr("src", data.matchImage);
+                    // Pop open the modal dialog
+                      $('#modal1').modal('open');
+                  });
+            });
+        </script>
+    </body>
+    </html>
