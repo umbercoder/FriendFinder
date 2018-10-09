@@ -1,228 +1,312 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Friend Finder</title>
-  <!-- Latest compiled and minified CSS & JS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://code.jquery.com/jquery.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<html>
 
-</head>
-<body>
-
-  <div class="container">
-    <div class="jumbotron">
-      <h1>Friend Finder</h1>
-      <h3>Best Friends are only a CLICK away!</h3>
-      <hr>
-      <a href="/"><button class="btn btn-danger btn-lg"><span class="fa fa-eye"></span> Search For Firends</button></a>
-      <a href="/app/public/survey.html"><button class="btn btn-danger btn-lg"><span class="fa fa-plus"></span> Take Survey</button></a>
-    </div>
-
-	<div class="container">
-		<div>
-			<h2>Survey Questions</h2>
-			<h3>Name </h3>
-		<input type="text" name="" id="name" class="form-control" required >
-
-		<h4>Link to Photo (Required)</h4>
-		<input type="text" name="" id="photo" class="form-control" required >
-
-        <hr>
-        <h5>Please select a number on how much you agree.  </h5>
-        <br>
-
-         <h5> 1 for Strongly Disagree thur 5 for Strongly Agree.</h5>
-         <br>
-
-		<h3><strong>Question 1</strong></h3>
-		<h4>I am the life of the party.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q1">
-	 		<option value=""></option>
-            <option value="1">1 </option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 </option>
-      	</select>
-
-		<h3><strong>Question 2</strong></h3>
-		<h4>I find pleasure sitting in a dark closet.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q2">
-            <option value=""></option>
-            <option value="1">1 </option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 </option>
-      	</select>
+  <head>
+    <!-- Tab Title -->
+    <title>Friend Finder | Quiz</title>
+    <!-- Link in a tab icon, cuz why not -->
+    <link rel="icon" href="http://www.freeiconspng.com/uploads/burn-burning-fire-flame-heat-icon--icon-search-engine-20.png">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  </head>
 
 
-		<h3><strong>Question 3</strong></h3>
-		<h4>I enjoy handing out at the bar with friends.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q3">
-            <option value=""></option>
-            <option value="1">1 </option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 </option>
-      	</select>
+  <body>
+
+    <div class = "container">
+      
+
+      <!-- Quiz Page Title -->
+      <div class="page-header">
+        <h1 style="font-size: 45px;"><span class="glyphicon glyphicon-fire" style="color: #d9534f;"></span> Friend Finder Quiz</h1>
+      </div>
 
 
-		<h3><strong>Question 4</strong></h3>
-		<h4>I only go outside to do basic things (work, grocery, etc)</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q4">
-            <option value=""></option>
-            <option value="1">1 </option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 </option>
-      	</select>
-
-
-		<h3><strong>Question 5</strong></h3>
-		<h4>I am often seen smiling.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q5">
-            <option value=""></option>
-            <option value="1">1 </option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 </option>
-      	</select>
-
-
-		<h3><strong>Question 6</strong></h3>
-		<h4>I don't care what people think about me.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q6">
-            <option value=""></option>
-            <option value="1">1 </option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 </option>
-      	</select>
-
-
-		<h3><strong>Question 7</strong></h3>
-		<h4>I apologize even when I have done noting wrong.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q7">
-            <option value=""></option>
-            <option value="1">1 </option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 </option>
-      	</select>
-
-		<h3><strong>Question 8</strong></h3>
-		<h4>Most of my friends are imaginary.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q8">
-            <option value=""></option>
-            <option value="1">1 </option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 </option>
-      	</select>
-
-		<h3><strong>Question 9</strong></h3>
-		<h4>I enjoy going new places.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q9">
-            <option value=""></option>
-            <option value="1">1 </option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 </option>
-      	</select>
-
-		<h3><strong>Question 10</strong></h3>
-		<h4>I talk on the phone often.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q10">
-            <option value=""></option>
-            <option value="1">1 </option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 </option>
-      	</select>
-
-		<br>
-		<br>
-
-		<!-- Submit Button -->
-		<button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
- 		Submit</button>
-
-         <footer class="footer">
-            <div class="container">
-                    <p><a href="/app/data/friends">API Friends List</a> | <a href="https://github.com/umbercoder/FriendFinder">GitHub Repo</a></p>
-              </div>
-            </footer>
-
-    </div>
-    	<!-- Modal Dialog Displaying Closest Friend Match -->
-	<div id="modal1" class="modal">
-            <div class="modal-content">
-                <h4>Your Best Friend Match</h4>
-                <div class="divider"></div>
-                <h5 id="matchName"></h5>
-                <img id="MatchImage" class="materialboxed" width="650" src="">
-            </div>
-            <div class="modal-footer">
-                <a href="/app/data/friends" class="modal-action modal-close waves-effect waves-green btn-flat">Fill Again!</a>
-            </div>
+      <!-- User Name and Photo Panel -->
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"><strong>About You</strong></h3>
         </div>
-    
-        <script type="text/javascript">
-            // $(document).ready(function() {
-            //     $('select').material_select();
-            //     $('.modal').modal({
-            //         dismissible: false, // Modal can be dismissed by clicking outside of the modal
-            //         opacity: .5, // Opacity of modal background
-            //         inDuration: 300, // Transition in duration
-            //         outDuration: 200, // Transition out duration
-            //         startingTop: '4%', // Starting top style attribute
-            //         endingTop: '10%' // Ending top style attribute
-            //     });
-            // });
-            // Activate submit button
-            $('#submit').on('click', function(event) {
-                event.preventDefault();
-                console.log('here')
-                // Gather user inputs
-                var friendinfo = {
-                    name: $('#name').val().trim(),
-                    photo: $('#photo').val().trim(),
-                    scores:[
-                        $('#q1').val().trim(),
-                        $('#q2').val().trim(),
-                        $('#q3').val().trim(),
-                        $('#q4').val().trim(),
-                        $('#q5').val().trim(),
-                        $('#q6').val().trim(),
-                        $('#q7').val().trim(),
-                        $('#q8').val().trim(),
-                        $('#q9').val().trim(),
-                        $('#q10').val().trim()
-                    ]
-                };
+        <div class="panel-body">
+          <h4>Your Full Name</h4>
+          <div class="input-group">
+            <input id = "formName" class="form-control" type="text" name="name" placeholder="John Smith">
+            <span class="input-group-addon">(Required)</span>
+          </div>  
+          <br>
+          <h4>Link to a Photo Image</h4>
+          <div class="input-group">
+            <input id = "formImage" class="form-control" type="text" name="name" placeholder="http://yourphotolink.com.jpg/">
+            <span class="input-group-addon">(Required)</span>
+          </div>
+        </div>
+      </div>
 
-                // Add user inputs to friends list
-                $.post('/app/data/friends', friendinfo)
-                  .done(function(data) {
-                      // Set the name and image values of friend match
-                      $('#userMatch').html(data.matchName);
-                    $("#userMatchImage").attr("src", data.matchImage);
-                    // Pop open the modal dialog
-                      $('#modal1').modal('open');
-                  });
-            });
-        </script>
-    </body>
-    </html>
+
+      <!-- Quiz Page Questions Panel -->
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"><strong>Questionnaire</strong></h3>
+        </div>
+        <div class="panel-body">
+          
+          <!-- Q1 -->
+          <h4><strong>Question 1</strong></h4>
+          <h5>You are the first to take charge in social gatherings or group projects.</h5>
+          <select data-placeholder="" class="chosen-select" id="Q1">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+          </select>
+
+          <!-- Q2 -->
+          <h4><strong>Question 2</strong></h4>
+          <h5>You easily understand objects/concepts that are intangible or abstract.</h5>
+          <select data-placeholder="" class="chosen-select" id="Q2">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+          </select>
+
+          <!-- Q3 -->
+          <h4><strong>Question 3</strong></h4>
+          <h5>You are energized when interacting with other people; being alone for extended periods of time drains your energy.</h5>
+          <select data-placeholder="" class="chosen-select" id="Q3">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+          </select>
+
+          <!-- Q4 -->
+          <h4><strong>Question 4</strong></h4>
+          <h5>You are effective at dealing with fast-changing situations and find that stable environments can become boring.</h5>
+          <select data-placeholder="" class="chosen-select" id="Q4">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+          </select>
+
+          <!-- Q5 -->
+          <h4><strong>Question 5</strong></h4>
+          <h5>You consider yourself to be more practical than artistic.</h5>
+          <select data-placeholder="" class="chosen-select" id="Q5">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+          </select>
+
+          <!-- Q6 -->
+          <h4><strong>Question 6</strong></h4>
+          <h5>You often find yourself lost in thought when you are walking in nature.</h5>
+          <select data-placeholder="" class="chosen-select" id="Q6">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+          </select>
+
+          <!-- Q7 -->
+          <h4><strong>Question 7</strong></h4>
+          <h5>You are more of a natural improviser than a careful planner.</h5>
+          <select data-placeholder="" class="chosen-select" id="Q7">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+          </select>
+
+          <!-- Q8 -->
+          <h4><strong>Question 8</strong></h4>
+          <h5>You prefer Front End design over Back End scripting.</h5>
+          <select data-placeholder="" class="chosen-select" id="Q8">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+          </select>
+
+          <!-- Q9 -->
+          <h4><strong>Question 9</strong></h4>
+          <h5>You have fun in a light-hearted atmosphere; prefering not to take things too seriously.</h5>
+          <select data-placeholder="" class="chosen-select" id="Q9">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+          </select>
+
+          <!-- Q10 -->
+          <h4><strong>Question 10</strong></h4>
+          <h5>Your mind is always buzzing with unexplored ideas and plans.</h5>
+          <select data-placeholder="" class="chosen-select" id="Q10">
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+          </select>
+
+        </div>
+      </div>
+
+
+      <!-- Quiz Submit Button -->
+      <button id="submitButton" type="submit" class="btn btn-md btn-danger btn-block"><h4><span class="glyphicon glyphicon-send"></span> Submit</h4></button> 
+  
+      <br>
+
+      <!-- Webpage Footer -->
+      <footer class="footer">
+        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/umbercoder/friendfinder" target="_blank">GitHub Repo</a> | <a href="/">Home</a></p>
+      </footer> 
+
+
+      <!-- Match Modal -->
+      <div id="resultsModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal Content-->
+          <div class="modal-content">
+
+            <!-- "X" Button to close the modal -->
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h2 class="modal-title"><strong>Meet Your New Friend!</strong></h2>
+            </div>
+
+            <!-- Modal Body (For Match Info) -->
+            <div class="modal-body">
+              <h2 id="matchName"></h2>
+              <img id="matchImg" src="" alt="Image Not Found" style="max-width: 350px;">
+            </div>
+
+            <!-- Modal Footer (Close Button) -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+
+
+    <!-- Link in jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+
+    <!-- Latest compiled and minified JavaScript (USED FOR THE MODAL) -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+    <!-- JavaScript for Submission Logic -->
+    <script>
+      // Global Variable Declaration (scoping fix)
+      var allFieldsCompleted;
+      $(document).ready(function() {
+        // Event Listener for Submission
+        $('#submitButton').on('click', function() {
+          
+          // Check if all the user fields are completed
+          checkIfComplete(function(){
+            // Proceed with AJAX call if all questions are answered
+            if(allFieldsCompleted){
+              collectInputs();
+            }
+            else{
+              alert('Please complete all fields before submitting!');
+            }
+          }); // end checkIfComplete() callback
+        }); // end submit listener
+      }); // document ready
+      // Function to valid user input
+      function checkIfComplete(callback){
+        // Check through all the questions (i.e. iterate through all of class "chosen-select")
+        var questionsCompleted;
+        $('.chosen-select').each(function(){
+          if ( $(this).val() == "" ){
+            questionsCompleted = false;
+          }
+        })
+        // This counters the async behavior of $.each()
+        .promise().done(function(){
+          // Check if any questions are incomplete
+          if(questionsCompleted == false){
+            allFieldsCompleted = false;
+          }
+          // Determine if Name is entered
+          else if( $('#formName').val().trim() == "" ){
+            allFieldsCompleted = false;
+          }
+          // Determine if Link is entered
+          else if( $('#formImage').val().trim() == "" ){
+            allFieldsCompleted = false;
+          }
+          // Otherwise, the all fields are completed
+          else{
+            allFieldsCompleted = true;
+          }
+          // Fire Off Callback (to counter async behavior of $.each)
+          callback();       
+        });
+      }
+      function collectInputs(){
+        // Make new friend object
+        var newFriend = {
+          name: $('#formName').val().trim(),
+          photo: $('#formImage').val().trim(),
+          scores: []
+        };
+        // Loop through Questions to get scores
+        var scoresArray = [];
+        $('.chosen-select').each(function(){
+          scoresArray.push( parseInt( $(this).val() ) ); // Parse Input Value as integer
+        })
+         // This counters the async behavior of $.each()
+        .promise().done(function(){
+          
+          // Push the array of scores to the new friend object
+          newFriend.scores = scoresArray;
+          // POST the newFriend to the friends.js file and get back the best match
+          var currentURL = window.location.origin;
+          $.post(currentURL + "/api/friends", newFriend, function(data){
+            // Add Best Match attributes to Modal
+            $('#matchName').text(data.name);
+            $('#matchImg').attr('src', data.photo);
+            // Show the modal with the best match 
+            $("#resultsModal").modal('toggle');
+          }); // end AJAX POST
+        });
+      }
+    </script>
+
+  </body>
+
+</html>
